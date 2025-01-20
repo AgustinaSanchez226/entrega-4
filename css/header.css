@@ -1,0 +1,81 @@
+body > header {
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  background-color: var(--prisma-color);
+  padding: 0.25rem 1rem;
+  justify-content: center;
+  align-items: center;
+  z-index: 9;
+}
+
+body > header > a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body > header > a img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+body > header > nav {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+body > header > nav a {
+  text-decoration: none;
+  color: var(--nav-bg);
+}
+body > header > nav a:first-child {
+  font-weight: 900;
+}
+body > header > form {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.25rem;
+}
+
+body > header > form label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body > header > form label svg {
+  width: auto;
+  height: 100%;
+  fill: var(--rosa-pink);
+}
+body > header > form label[for="btnMenu"] svg {
+  stroke: var(--rosa-pink);
+}
+body > header > form label[for="btnMenu"] svg {
+  display: none;
+}
+body > header > form input[type="checkbox"] {
+  display: none;
+}
+@media (max-width: 768px) {
+  body > header {
+    justify-content: space-between;
+  }
+  body > header > nav {
+    display: none;
+  }
+  body > header > form {
+    gap: 1rem;
+  }
+  body > header > form label[for="btnMenu"] svg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
