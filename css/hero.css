@@ -39,6 +39,11 @@
   text-decoration: none;
   padding: 0.25rem 0.75rem;
   border-radius: 0.7rem;
+  transition: all 150ms ease-in-out;
+}
+#content nav a:hover {
+  background-color: var( --fire-tale);
+  color: var (--text-white);
 }
 
 #imagen {
