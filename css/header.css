@@ -33,7 +33,25 @@ body > header > nav {
 body > header > nav a {
   text-decoration: none;
   color: var(--nav-bg);
+  position: relative;
 }
+body > header > nav a::before {
+  content: "";
+  width: 100%;
+  height: 0.2rem;
+  background-color: var(--nav-bg);
+  position: absolute;
+  bottom: -0.2rem;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 150ms ease-in-out;
+}
+
+body > header > nav a:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+  }
 body > header > nav a:first-child {
   font-weight: 900;
 }
@@ -52,14 +70,22 @@ body > header > form label {
 body > header > form label svg {
   width: auto;
   height: 100%;
-  fill: var(--rosa-pink);
+  fill: var(--nav-bg);
+  transition: all 150ms ease-in-out;
+}
+body > header > form label:hover svg {
+  fill: var(--fire-tale);
 }
 body > header > form label[for="btnMenu"] svg {
-  stroke: var(--rosa-pink);
-}
+  stroke: var(--nav-bg);
+  }
+
 body > header > form label[for="btnMenu"] svg {
   display: none;
 }
+body > header > form label[for="btnMenu"]:hover svg {
+  stroke: var(--fire-tale);
+  }
 body > header > form input[type="checkbox"] {
   display: none;
 }
