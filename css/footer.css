@@ -2,7 +2,7 @@ body > footer {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    padding: 1rem;
+    padding: 3rem;
     align-items: center;
   }
   body > footer nav {
